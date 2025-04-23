@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
+//@Primary
 public class StripePaymentGateway implements PaymentGateway{
 
     @Value("${STRIPE_KEY_SECRET}")

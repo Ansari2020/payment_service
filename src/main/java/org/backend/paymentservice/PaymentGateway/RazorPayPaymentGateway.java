@@ -9,7 +9,7 @@ import org.json.JSONObject;
 import com.razorpay.RazorpayClient;
 
 @Component
-//@Primary
+@Primary
 public class RazorPayPaymentGateway implements PaymentGateway{
 
     private final RazorpayClient razorpay;
@@ -26,12 +26,12 @@ public class RazorPayPaymentGateway implements PaymentGateway{
         paymentLinkRequest.put("currency","INR");
        // paymentLinkRequest.put("accept_partial",true);
        // paymentLinkRequest.put("first_min_partial_amount",100);
-        paymentLinkRequest.put("expire_by",1741089380);
+        paymentLinkRequest.put("expire_by",1744432027);
         paymentLinkRequest.put("reference_id",orderId.toString());
         paymentLinkRequest.put("description","Payment for orderid"+ orderId);
         JSONObject customer = new JSONObject();
-        customer.put("name","+919889327094");
-        customer.put("contact","Danish Ansari");
+        customer.put("contact","+919889327094");
+        customer.put("name","Danish Ansari");
         customer.put("email","danishdeveloper2018@gmail.com");
         paymentLinkRequest.put("customer",customer);
         JSONObject notify = new JSONObject();
